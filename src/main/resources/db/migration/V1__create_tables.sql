@@ -1,6 +1,6 @@
 CREATE TABLE schedule_table(
-  id INT PRIMARY KEY NOT NULL,
-  start_date TIMESTAMP NOT NULL,
-  end_date TIMESTAMP NOT NULL ,
-  interval INT NOT NULL
+  id BIGSERIAL PRIMARY KEY NOT NULL,
+  start_time TIME NOT NULL,
+  end_time TIME NOT NULL ,
+  span INT NOT NULL
 );
