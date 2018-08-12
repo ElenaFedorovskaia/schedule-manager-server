@@ -13,6 +13,7 @@ public class ScheduleTableController {
     @Autowired
     private ScheduleTableService scheduleTableService;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/scheduleTable/{id}", method = RequestMethod.GET, produces = "application/json")
     public @ResponseBody ScheduleTable getScheduleTableDTO(@PathVariable String id){
         return scheduleTableService.getScheduleTable(Long.parseLong(id, 10));

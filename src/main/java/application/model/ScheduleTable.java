@@ -1,5 +1,7 @@
 package application.model;
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.time.LocalTime;
 
@@ -18,6 +20,8 @@ public class ScheduleTable {
     private LocalTime endTime;
 
     private int span;
+
+    private String titles;
 
     public Long getId() {
         return id;
@@ -49,5 +53,13 @@ public class ScheduleTable {
 
     public void setSpan(int span) {
         this.span = span;
+    }
+
+    public String getTitles() {
+        return titles;
+    }
+
+    public void setTitles(String titles) {
+        this.titles = titles;
     }
 }
